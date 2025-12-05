@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boer Goat Farming Guide</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-green': '#10B981',
+                        'accent-blue': '#3B82F6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .main-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+            border-radius: 10px;
+            padding-top: 10px;
+
+        }
+
+        .main-img {
+            border-radius: 10px;
+            background-color: black;
+            width: 900px;
+            margin-left: 300px;
+            box-shadow: 0px 0px 1px 2px black;
+
+        }
+
+        .section-content {
+            width: 900px;
+            margin-left: 300px;
+            font-size: 15px;
+            font-weight: 550;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .plgfont{
+            font-size: 20px;
+            font-weight: 550;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .lgfont{
+            font-size: 25px;
+            font-weight: 600;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .lgfont2{
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+        
+        .lgfont3{
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+    .plg{
+        font-size: 17px;
+        letter-spacing: 1px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    ul li{
+        font-size: 17px;
+        letter-spacing: 1px;
+        
+    }
+    .styled-list{
+list-style-type:inherit;
+
+        padding-left: 20px;
+    }
+    .styled-list li{
+        margin-bottom: 10px;
+        padding-left: 5px;
+
+    }
+    .styled-list strong{
+        font-weight: bold;
+        
+    }
+    </style>
+</head>
+
+<body style="background-color: rgb(228, 228, 228);">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Brand -->
+                <a href="index.html"
+                    class="flex items-center space-x-2 lgfont2 font-extrabold text-primary-green transition-colors hover:text-green-700">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.477 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.477-3-9s1.343-9 3-9m-9 9h.01">
+                        </path>
+                    </svg>
+                    <span>AgriSense</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <a href="index.html"
+                        class="text-gray-500 hover:text-primary-green hover:border-b-2 hover:border-primary-green px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="categories.html"
+                        class="text-primary-green border-b-2 border-primary-green px-3 py-2 text-sm font-medium">Guides</a>
+                    <a href="about.html"
+                        class="text-gray-500 hover:text-primary-green hover:border-b-2 hover:border-primary-green px-3 py-2 text-sm font-medium">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- Main Section -->
+    <section class="mb-12 fade-in px-4">
+    <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+        <img class="w-full h-auto object-cover" 
+             src="https://animalagalliance.org/wp-content/uploads/2020/04/grazing-960x480.jpg" 
+             alt="Small ruminants grazing">
+        <div class="p-6 md:p-8">
+            <h1 class="lgfont">The World of Small Ruminants</h1>
+            <p class="plgfont">
+                Small ruminants, primarily sheep and goats, are mammals with a 
+                unique four-chambered stomach that allows them to digest tough, fibrous plants. They are vital 
+                to smallholder farmers, especially in challenging environments, as they efficiently convert 
+                low-quality feed into high-quality protein, milk, and fiber with a low initial investment.
+            </p>
+        </div>
+    </div>
+</section>
+
+        <hr class="my-12 border-gray-300">
+        
+        <!-- Merino Wool Section -->
+        <section class="fade-in" style="animation-delay: 0.2s;">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden" style="border-radius: 20px;">
+                <div class="md:flex">
+                    <div class="md:w-1/2">
+                        <img class="w-full h-full object-cover"
+                            src="https://cdn.shopify.com/s/files/1/1000/6948/files/Merino-Sheep_grande.jpg?v=1479380541"
+                            alt="Merino Sheep" style="border-radius: 20px;">
+                    </div>
+                    <div class="md:w-1/2 p-6">
+                        <h2 class="lgfont2 font-bold mb-4 text-gray-900" >Discover Merino Wool</h2>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="lgfont3 font-semibold text-primary-green">What is Merino Wool?</h3>
+                                <p class="plg">Merino wool, from the Merino sheep, is considered the highest
+                                    quality sheep wool available. Its fine, soft structure, with ten times more hairs
+                                    per square centimeter than average sheep, ensures it doesn't itch.</p>
+                            </div>
+                            <div>
+                                <h3 class="lgfont3 font-semibold text-primary-green">Organic and Ethical</h3>
+                                <p class="plg">The Merino wool in the Sophie Stone collection is GOTS-certified
+                                    organic, sourced from sheep that are not subjected to mulesing, ensuring ethical and
+                                    sustainable practices.</p>
+                            </div>
+                            <div>
+                                <h3 class="lgfont3 font-semibold text-primary-green">Key Benefits</h3><br>
+                                <ul class="styled-list" style="letter-spacing: 1px;">
+                                    <li><strong>Temperature Regulating:</strong> <abbr>Protects from both extreme heat and
+                                        cold.</abbr></li>
+                                    <li><strong>Odor-Resistant:</strong><abbr>Unlike cotton, it doesn't absorb odors and
+                                        requires less washing.
+                                    </abbr></li>
+                                    <li><strong>Moisture-Wicking:</strong><abbr> Absorbs moisture and wicks it away, keeping
+                                        you dry.</abbr></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden" style="margin-top: 20px; border-radius: 20px;">
+                <div class="md:flex">
+                    <div class="md:w-1/2">
+                        <img class="w-full h-full object-cover"
+                            src="https://www.geodesheep.com/files/site/img/geode/zGalerie%20Eleveur/Suffolk/Rollin%20Marie%20Reine/ROLLINMR_SUFFOLK_BELIER_03.JPG"
+                            alt="Merino Sheep" style="border-radius: 20px;">
+                    </div>
+                    <div class="md:w-1/2 p-6">
+                        <h2 class="lgfont2 font-bold mb-4 text-gray-900">Discover Suffolk Sheep</h2>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="lgfont3 font-semibold text-primary-green">What is
+                                    Suffolk Sheep?</h3>
+                                <p class="plg">A Suffolk sheep is a British breed of domestic
+                                    sheep primarily raised for its lean, high-quality meat. Known for its black face and
+                                    legs,
+                                    white wool, and polled (hornless) nature, the breed is prized for its rapid growth,
+                                    early
+                                    maturity, and adaptability. Suffolk sheep are also frequently used in crossbreeding
+                                    to
+                                    produce lambs with enhanced growth and meat traits.</p>
+                            </div>
+                            <div>
+                                <h3 class="lgfont3 font-semibold text-primary-green">Key
+                                    characteristics</h3><br>
+
+                                <ul class="styled-list">
+                                    <li><strong>Appearance:</strong><abbr>They have a black face, ears, and
+                                        legs, and a white woolly body. Both males (\(rams\)) and females (\(ewes\)) are
+                                        polled
+                                        (hornless).</abbr></li>
+                                    <li><strong> Size:</strong><abbr> Mature rams can weigh between \(250-350\) lbs (\(125\)
+                                        kg), while ewes
+                                        weigh between \(180-250\) lbs (\(88\) kg).</abbr></li>
+                                    <li><strong>Temperament:</strong><abbr>They are known for being docile
+                                        and
+                                        easy to manage.Maternal.</abbr></li>
+                                    <li><strong>traits:</strong> <abbr>Suffolk ewes are prolific mothers with good milk
+                                        production
+                                        and can often deliver lambs with minimal issues.</abbr></li>
+                                    <li><strong>Origin: </strong><abbr>The Suffolk breed originated in the East Anglia region
+                                        of England in the late
+                                        1700s
+                                        from a cross between Norfolk Horn ewes and Southdown rams.</abbr></li>
+                                    <li><strong>Recognition:</strong> <abbr>It was officially recognized as a pure breed in
+                                        1810.</abbr></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden" style="margin-top: 20px; border-radius: 20px;">
+                <div class="md:flex">
+                    <div class="md:w-1/2">
+                        <img class="w-full h-full object-cover"
+                            src="https://images.squarespace-cdn.com/content/v1/5bbe3ef64d8711bbc7170a14/1540878292218-IN8SRLZF5JGNKBH4QIXH/jacob_ewe_with_lambs.jpg"
+                            alt="Merino Sheep" style="border-radius: 20px;">
+                    </div>
+                    <div class="md:w-1/2 p-6">
+                        <h2 class="lgfont2 font-bold mb-4 text-gray-900">Discover Jacob Sheep</h2>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="lgfont3 font-semibold text-primary-green">What is
+                                    Jacob Sheep?</h3>
+                                <p class="plg">A Jacob sheep is a rare, hardy British breed of
+                                    domestic sheep known for its distinctive appearance, which includes a black and
+                                    white
+                                    spotted coat (piebald) and multiple horns, often four. Both males and females have
+                                    horns,
+                                    and they can have anywhere from two to six. Historically used as "park ornaments,"
+                                    they are
+                                    now raised for their unique fleece, meat, and skins, and are considered a heritage
+                                    breed.</p>
+                            </div>
+                            <div>
+                                <h3 class="lgfont3 font-semibold text-primary-green">Key
+                                    characteristics</h3><br>
+
+                                <ul class="styled-list">
+                                    <li><strong>Appearance:</strong>They have a piebald coat with patches
+                                        of black and white, and can have from two to six horns.
+                                        Horns: Both male and female sheep are horned. Rams typically have larger, more
+                                        impressive
+                                        horns than ewes.</li>
+
+                                    <li><strong>Temperament:</strong>Jacob sheep are known for being docile, hardy, and
+                                        easy to care for, with a
+                                        natural resistance to parasites and hoof problems.</li>
+                                    <li><strong>Uses:</strong> They are primarily raised for their wool, which can be
+                                        spun into various colors
+                                        from
+
+                                        white to black, and for their meat and hides.</li>
+                                    <li><strong>Origin: </strong>The breed's exact origins are unknown, but they have
+                                        been in Britain for centuries
+                                        and are believed to be descendants of ancient Mediterranean sheep breeds. The
+                                        name "Jacob
+                                        sheep" comes from a Biblical story in Genesis 30 about the patriarch Jacob and
+                                        his spotted
+                                        floc</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden" style="margin-top: 20px; border-radius: 20px;">
+                <div class="md:flex">
+                    <div class="md:w-1/2">
+                        <img class="w-full h-full object-cover"
+                            src="https://i.pinimg.com/736x/1a/7b/dc/1a7bdc430510c885c42320a868c8f731.jpg"
+                            alt="Merino Sheep" style="border-radius: 20px;">
+                    </div>
+                    <div class="md:w-1/2 p-6">
+                        <h2 class="lgfont2 font-bold mb-4 text-gray-900">Discover Cheviot Sheep</h2>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="lgfont3 font-semibold text-primary-green">What is
+                                    Cheviot Sheep?</h3>
+                                <p class="plg">A Cheviot is a hardy, dual-purpose breed of
+                                    white-faced sheep that originated in the hills of Scotland and Northumberland,
+                                    England.
+                                    Known for their resilience and alert appearance, they are prized for both their
+                                    high-quality
+                                    meat and dense wool. They are hornless, have white, wool-free faces and legs, and
+                                    often have
+                                    black muzzles and feet</p>
+                            </div>
+                            <div>
+                                <h3 class="lgfont3 font-semibold text-primary-green">Key
+                                    characteristics</h3><br>
+
+                                <ul class="styled-list">
+                                    <li> They are known for being hardy and
+                                        self-sufficient, requiring less husbandry than some other breeds.</li>
+
+                                    <li>They are prolific mothers with strong lambing capabilities.</li>
+                                    <li><strong> Types:</strong> <br>a) Hill type: Smaller and comparable in size to
+                                        other
+                                        hill breeds.<br>
+                                        b) Park type: Larger and more comparable to lowland breeds.</li>
+                                    <li><strong>Origin: </strong> The breed is named after the Cheviot Hills, a range on
+                                        the border of England and
+                                        Scotland.</li>
+                                    <li><strong>Appearance:</strong> Cheviots are medium-sized sheep with a distinctive
+                                        white face and legs that
+                                        are
+                                        free of wool. They have alert, erect ears, black muzzles, and black feet.</li>
+                                    <li><strong>Wool: </strong> Their wool is dense, resilient, and has a desirable
+                                        helical crimp.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden" style="margin-top: 20px; border-radius: 20px;">
+        <div class="md:flex">
+            <div class="md:w-1/2">
+                <img class="w-full h-full object-cover"
+                    src="https://www.proagrimedia.com/wp-content/uploads/2023/07/Lincoln-ewe-and-lamb.jpg"
+                    alt="Merino Sheep" style="border-radius: 20px;">
+            </div>
+            <div class="md:w-1/2 p-6">
+                <h2 class="lgfont2 font-bold mb-4 text-gray-900">Discover Lincoln Sheep</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="lgfont3 font-semibold text-primary-green">What is
+                            Lincoln Sheep?</h3>
+                        <p class="plg">A Lincoln sheep, or Lincoln Longwool, is a
+                            British native breed of large sheep known for producing the heaviest, longest, and most
+                            lustrous fleece of any sheep breed. It is a dual-purpose breed, also valued for its
+                            substantial carcass, and its wool is used for high-tensile strength products like carpets
+                            and wigs.</p>
+                    </div>
+                    <div>
+                        <h3 class="lgfont3 font-semibold text-primary-green">Key
+                            characteristics</h3><br>
+
+                        <ul class="styled-list">
+                            <li> <strong>Size:</strong>They are a very large and heavy breed,
+                                with
+                                mature rams weighing 120–160 kg (265–350 lbs).</li>
+
+                            <li><strong>Wool:</strong>Their wool is long (7–8 inches or 175–200 mm), strong, coarse, and
+                                very lustrous.
+                                The
+                                fleece is also one of the heaviest and longest of any breed.</li>
+                            <li><strong> Appearance:</strong> <br>a) Hill type: Smaller and comparable in size to
+                                other
+                                hill breeds.<br>
+                                b) Park type: Larger and more comparable to lowland breeds.</li>
+                            <li><strong>Origin: </strong> The breed is named after the Cheviot Hills, a range on
+                                the border of England and
+                                Scotland.</li>
+                            <li><strong>Appearance:</strong> They have a hornless, bold head, and a distinctive forelock
+                                of wool around
+                                the
+                                face. Their face color can be white, blue-grey, or even black.</li>
+                            <li><strong>Purpose:</strong> They are considered a "dual-purpose" breed, valued for both
+                                their wool and
+                                meat.</li>
+                            <li><strong>Uses: </strong>The wool is used for products like upholstery yarns, carpet
+                                yarns, and wigs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden" style="margin-top: 20px; border-radius: 20px;">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden" style="margin-top: 20px; border-radius: 20px;">
+        <div class="md:flex">
+            <div class="md:w-1/2">
+                <img class="w-full h-full object-cover" src="https://cdn.creatures.com/57c/1d7/330/d28e7.jpeg"
+                    alt="Merino Sheep" style="border-radius: 20px;">
+            </div>
+            <div class="md:w-1/2 p-6">
+                <h2 class="lgfont2 font-bold mb-4 text-gray-900">Discover Karakul Sheep</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="lgfont3 font-semibold text-primary-green">What is
+                            Karakul Sheep?</h3>
+                        <p class="plg">A Karakul is a hardy breed of sheep from Central
+                            Asia, known for its valuable pelts from young lambs and its coarse wool from adults. These
+                            sheep are multi-purpose, raised for their meat, milk, pelts, and wool, and are adaptable to
+                            harsh conditions. They are recognized by their distinctive fat-tailed build and the unique,
+                            tightly curled, and glossy pelts of their lambs, called Persian lamb in the fur trade</p>
+                    </div>
+                    <div>
+                        <h3 class="lgfont3 font-semibold text-primary-green">Key
+                            characteristics</h3><br>
+                           
+
+                        <ul class="styled-list">
+                            <li> <strong>Lamb pelts:</strong>The most famous product is the
+                                "Persian lamb" pelt from newborn lambs, which have soft, tight, glossy curls, often
+                                black.</li>
+
+                            <li><strong>Adult Wool:</strong>The wool of adult sheep is coarse and is often used for
+                                carpets, outer
+                                garments,
+                                and felting. Many adult Karakul sheep have a double coat of coarse guard hair and a fine
+                                undercoat, which spinners often separate.</li>
+                            <li><strong> Meat and milk:</strong> <br>They are also a source of meat, particularly the
+                                fat from their
+                                tails,
+                                which
+                                is an ingredient in some Central Asian cuisines.</li>
+                            <li><strong>Hardy and adaptable:</strong> Hardy and adaptable: Karakul sheep are known for
+                                their hardiness and ability to
+                                thrive in
+                                rugged environments, making them valuable for pasture improvement.
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </section>
+    </div>
+    <!-- Footer -->
+    <footer class="mt-12 py-8 bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 AgriSense Project. Built by SDE Aspirant.</p>
+            <div class="mt-4 space-x-4 text-sm">
+                <a href="about.html" class="hover:text-primary-green transition-colors">About Us</a>
+                <a href="categories.html" class="hover:text-primary-green transition-colors">View All Guides</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
