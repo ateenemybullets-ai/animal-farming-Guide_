@@ -1,315 +1,373 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-  .card0 {
-  width: 1500px;
-  display: flex;            /* 2-part division */
-  gap: 15px;
-  padding: 15px;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  *{
+  box-sizing:border-box;
 }
 
-/* Hover effect */
-.card0:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+body{
+  margin:0;
+  padding:15px;
+  font-family:Arial, sans-serif;
+  background:#f2f2f2;
+  line-height:1.6;
 }
 
-/* Left side image */
-.card0 img {
-  width: 1500px;        /* adjust size */
-  height: 500px;       /* adjust size */
-  object-fit: cover;
-  border-radius: 14px;
-  flex-shrink: 0;      /* image fixed size */
+/* Container */
+.wrapper{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:25px;
 }
 
-/* Right side text */
-.card0 .text-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: Arial;
-}
-.card {
-  width: 1920px;
-  display: flex;            /* 2-part division */
-  gap: 15px;
-  padding: 15px;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Card */
+.card{
+  display:flex;
+  gap:20px;
+  padding:18px;
+  background:#fff;
+  border-radius:16px;
+  box-shadow:0 6px 18px rgba(0,0,0,.2);
+  transition:.3s;
 }
 
-/* Hover effect */
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 28px rgba(0,0,0,.3);
 }
 
-/* Left side image */
-.card img {
-  width: 400px;        /* adjust size */
-  height: 300px;       /* adjust size */
-  object-fit: cover;
-  border-radius: 14px;
-  flex-shrink: 0;      /* image fixed size */
+.card img{
+  width:380px;
+  height:260px;
+  object-fit:cover;
+  border-radius:14px;
+  flex-shrink:0;
 }
 
-/* Right side text */
-.card .text-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: Arial;
+/* Text auto resize */
+.text-box h1{
+  font-size:clamp(1.6rem,3vw,2.2rem);
+  margin:0;
 }
-.card1 {
-  width: 1920px;
-  display: flex;            /* 2-part division */
-  gap: 15px;
-  padding: 15px;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.text-box h2{
+  font-size:clamp(1.3rem,2.5vw,1.8rem);
+}
+.text-box h3{
+  font-size:clamp(1.1rem,2.2vw,1.5rem);
+}
+.text-box p{
+  font-size:clamp(0.95rem,2vw,1.1rem);
 }
 
-/* Hover effect */
-.card1:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+/* Tablet */
+@media(max-width:900px){
+  .card{
+    flex-direction:column;
+  }
+  .card img{
+    width:100%;
+    height:auto;
+  }
 }
 
-/* Left side image */
-.card1 img {
-  width: 400px;        /* adjust size */
-  height: 300px;       /* adjust size */
-  object-fit: cover;
-  border-radius: 14px;
-  flex-shrink: 0;      /* image fixed size */
+/* Mobile */
+@media(max-width:480px){
+  body{padding:10px;}
+  .card1{padding:14px;}
+
+}
+*{
+  box-sizing:border-box;
 }
 
-/* Right side text */
-.card1 .text-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: Arial;
-}
-.card2 {
-  width: 1920px;
-  display: flex;            /* 2-part division */
-  gap: 15px;
-  padding: 15px;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+body{
+  margin:0;
+  padding:15px;
+  font-family:Arial, sans-serif;
+  background:#f2f2f2;
+  line-height:1.6;
 }
 
-/* Hover effect */
-.card2:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+/* Container */
+.wrapper{
+  max-width:1500px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:25px;
 }
 
-/* Left side image */
-.card2 img {
-  width: 400px;        /* adjust size */
-  height: 300px;       /* adjust size */
-  object-fit: cover;
-  border-radius: 14px;
-  flex-shrink: 0;      /* image fixed size */
+/* Card */
+.card{
+  display:flex;
+  gap:20px;
+  padding:18px;
+  background:#fff;
+  border-radius:16px;
+  box-shadow:0 6px 18px rgba(0,0,0,.2);
+  transition:.3s;
 }
 
-/* Right side text */
-.card2 .text-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: Arial;
-}
-.card3 {
-  width: 1920px;
-  display: flex;            /* 2-part division */
-  gap: 15px;
-  padding: 15px;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 28px rgba(0,0,0,.3);
 }
 
-/* Hover effect */
-.card3:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+.card img{
+  width:520px;
+  height:550px;
+  object-fit:cover;
+  border-radius:14px;
+  flex-shrink:0;
 }
 
-/* Left side image */
-.card3 img {
-  width: 400px;        /* adjust size */
-  height: 300px;       /* adjust size */
-  object-fit: cover;
-  border-radius: 14px;
-  flex-shrink: 0;      /* image fixed size */
+/* Text auto resize */
+.text-box h1{
+  font-size:clamp(1.6rem,3vw,2.2rem);
+  margin:0;
+}
+.text-box h2{
+  font-size:clamp(1.3rem,2.5vw,1.8rem);
+}
+.text-box h3{
+  font-size:clamp(1.1rem,2.2vw,1.5rem);
+}
+.text-box p{
+  font-size:clamp(0.95rem,2vw,1.1rem);
 }
 
-/* Right side text */
-.card3 .text-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: Arial;
-}
-.card4 {
-  width: 1920px;
-  display: flex;            /* 2-part division */
-  gap: 15px;
-  padding: 15px;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Tablet */
+@media(max-width:900px){
+  .card{
+    flex-direction:column;
+  }
+  .card img{
+    width:100%;
+    height:auto;
+  }
 }
 
-/* Hover effect */
-.card4:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+/* Mobile */
+@media(max-width:480px){
+  body{padding:10px;}
+  .card{padding:14px;}
+
+}
+/* Main banner card */
+.main-card img{
+  width:100%;
+  height:700px;
+  object-fit:cover;
 }
 
-/* Left side image */
-.card4 img {
-  width: 400px;        /* adjust size */
-  height: 300px;       /* adjust size */
-  object-fit: cover;
-  border-radius: 14px;
-  flex-shrink: 0;      /* image fixed size */
-}
-
-/* Right side text */
-.card4 .text-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: Arial;
-}
-.card5 {
-  width: 1920px;
-  display: flex;            /* 2-part division */
-  gap: 15px;
-  padding: 15px;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover effect */
-.card5:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.3);
-}
-
-/* Left side image */
-.card5 img {
-  width: 400px;        /* adjust size */
-  height: 300px;       /* adjust size */
-  object-fit: cover;
-  border-radius: 14px;
-  flex-shrink: 0;      /* image fixed size */
-}
-
-/* Right side text */
-.card5 .text-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: Arial;
+/* Mobile ke liye */
+@media(max-width:768px){
+  .main-card img{
+    height:260px;
+  }
 }
 </style>
 </head>
+
 <body>
-  <center>
-<div class="card0">
-  <img src="image/cattlefarme.png" alt=""></center>
-  
-  
+
+<div class="wrapper">
+
+<div class="card main-card">
+  <img src="image/cattlefarme.png"alt="Main Farm Image">
+</div> <br><center><h1 style="font-size:50px; font-family:sarif;">Cow categories</h1></center>
+
+<div class="card">
+  <img src="image/gircow.jpg">
+  <div class="text-box">
+    <h3 style="font-family:sarif;">Gir Cow Detail:</h3>
+    <p>
+      A Gir cow is a famous, indigenous Indian dairy cattle breed from Gujarat's Gir forest, known for its high milk yield,
+       heat tolerance, disease resistance, and distinctive features like a prominent hump and pendulous ears,
+        producing nutritious A2 milk rich in beta-carotene, making it popular globally for its hardy nature and valuable milk and ghee
+      Gir cow is an indigenous Indian breed from Gujarat,
+      known for A2 milk, disease resistance and heat tolerance.
+      Key Characteristics:
+      Origin: Named after the Gir forest in Gujarat, India, also known as Bhodali, Desan, Kathiawari, and Surati.
+      Appearance: Often red to spotted white, with a broad, convex forehead, large, leaf-like ears, and a prominent hump ( Surya Ketu Nadi in Ayurveda).
+      Milk: Produces high-quality A2 milk (A2 beta-casein protein), considered easily digestible and rich in nutrients like beta-carotene, giving ghee a golden color.
+      Hardiness:
+      Highly adaptable to tropical climates, resistant to diseases, and known for longevity and easy maintenance.
+      Economic & Traditional Significance
+
+      Dairy:
+      Valued for high milk fat (4.5-5.5%) and total yield, ideal for producing nutritious ghee.
+      Ayurveda:
+       Used in Panchgavya (milk, curd, ghee, urine, dung) for therapeutic properties.
+      Global Presence: Popularly exported and bred in countries like the USA, Mexico, and Brazil.
+    </p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="image/sahiwal2.jpg">
+  <div class="text-box">
+    <h3>Sahiwal Cow</h3>
+    <p>
+   The Sahiwal cow is a famous breed of Zebu cattle from the Punjab region of Pakistan and India, highly prized for its high milk yield and rich, high-fat milk, while also being resilient to hot climates and tropical diseases like ticks, making it excellent for dairy farming in tropical areas. Known for its reddish-brown coat, strong build, and adaptability, the Sahiwal is a dual-purpose breed (milk & beef) that's a popular choice for improving local dairy herds globally. 
+Key Characteristics
+Origin: Sahiwal district, Punjab (Pakistan/India).
+Appearance: Reddish-brown or dun-colored, with darker shades on head, legs, and tail; strong build.
+Milk Production: High yield (8-10+ kg/day) with high fat content (around 4.5-5%).
+Climate Adaptability: Excellent heat tolerance and resistance to tropical diseases, especially ticks.
+Usage: Primarily dairy, but also used for beef; popular for crossbreeding to enhance dairy genetics. 
+Advantages for Farmers
+High Productivity: Produces large volumes of high-quality milk.
+Hardiness: Thrives in harsh, hot conditions where other breeds struggle.
+Ease of Milking: Larger teats make milking easier.
+Profitability: A smart investment for both small and large dairy farms.
+    </p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="image/tharparkar cow.webp">
+  <div class="text-box">
+    <h3>Tharparkar Cow</h3>
+    <p>
+      The Tharparkar cow is a resilient, dual-purpose Indian breed from the Thar Desert, known for its hardiness in hot climates, disease resistance, and calm nature, serving as both a good milk producer (rich A2 milk) and a strong draught animal, making it vital for arid region farmers. Its key advantages are its adaptability to harsh conditions, consistent milk yield, strong immunity, and dual utility for dairy and farm work, ensuring livelihood. 
+Characteristics of Tharparkar Cow
+Origin: Named after the Thar Desert, also called Thari, White Sindhi, or Grey Sindhi.
+Appearance: Medium-sized, compact, with a white or light grey coat and distinctive lyre-shaped horns.
+Temperament: Docile and calm, making it easy to handle.
+Physical Traits: Well-developed hump (in males), strong legs, and fine skin. 
+Advantages of Tharparkar Cow
+Climate Adaptability: Thrives in dry, hot desert conditions, tolerating heat and water scarcity.
+Dual-Purpose Utility: Excellent for both milk production and as a sturdy draught animal for farm work.
+High Milk Quality: Produces nutritious A2 milk, rich in fat (around 5%) and SNF (9%), beneficial for health.
+Disease Resistance: Strong immunity, capable of fighting common tropical diseases.
+Hardiness: Can subsist on sparse vegetation during droughts and is generally long-lived.
+Economic Value: Its versatility ensures year-round productivity and makes it an economically viable breed for small farmers. 
+Milk Production
+Yields 8-10 kg of milk daily, with potential for over 1900 kg per lactation under good conditions.
+    </p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="image/red-sindhicow.webp">
+  <div class="text-box">
+    <h3>Red Sindhi Cow</h3>
+    <p>
+    The Red Sindhi is a popular Zebu dairy cattle breed from Pakistan, known for its deep red color, hardiness, and excellent milk production, especially in hot climates, offering advantages like heat/disease resistance and good milk quality (around 10kg/day) under varied conditions, making it great for crossbreeding with European breeds to combine hardiness with higher yields. 
+What is a Red Sindhi Cow?
+Origin: Native to the Sindh province of Pakistan, popular in India, Pakistan, Bangladesh, etc..
+Appearance: Medium-sized, deep red to light red/brown, with a hump.
+Temperament: Hardy and adaptable. 
+Advantages of Red Sindhi Cattle
+Heat Tolerance: Excellent adaptation to hot climates, a key feature for tropical regions.
+Disease Resistance: Shows good resistance to various diseases.
+Good Milk Yield: Produces good quality milk (around 10kg/day or 1250-1800kg/lactation) under diverse conditions, suitable for both milk and dual-purpose use.
+Adaptability: Can thrive on various forages and different environments.
+Crossbreeding: Used globally to infuse heat tolerance and hardiness into temperate breeds like Jersey, improving overall dairy resilience.
+Strong Physique: Vigorous, with bulls used for draft work despite being slow.
+    </p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="image/rathi cow.jpg">
+  <div class="text-box">
+    <h3>Rathi Cow</h3>
+    <p>
+      The Rathi cow is a hardy, native Indian breed from Rajasthan's arid regions, known for its excellent milk production (often A2 milk) and adaptability to harsh climates, featuring brown/white patches and a calm nature, offering benefits like high-quality nutrition, bone health, and economic support for desert farmers. 
+About the Rathi Cow
+Origin: Native to the desert areas of Rajasthan, India (Bikaner, Jaisalmer, Ganganagar).
+Appearance: Typically brown with white patches, though can be solid brown or black with white spots; medium to large size.
+Temperament: Docile and calm, making them easy to manage.
+Origin of Name: Named after the Raths, a nomadic pastoral tribe.
+Genetics: Believed to be a mix of Red Sindhi, Sahiwal, Dhanni, and Tharparkar breeds. 
+Advantages of Rathi Cows
+High Milk Yield: Efficient milk producers, averaging 6-15 liters daily, with rich, nutritious milk.
+Climate Adaptability: Thrive in extreme heat and arid conditions where other breeds struggle.
+A2 Milk: Produces A2 beta-casein milk, which is highly digestible and good for gut health.
+Nutritional Value: Milk is rich in protein, healthy fats, vitamins (A), and minerals, supporting immunity and strong bones.
+Economic Value: A key source of income for farmers in desert regions.
+Dual-Purpose: Used for both dairy and draught (work).
+Ayurvedic Uses: Rathi ghee is used in traditional practices for massage and as a health supplement for children, aiding digestion and skin health.
+    </p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="image/haryana-cows.jpg">
+  <div class="text-box">
+    <h3>Hariana Cow</h3>
+    <p>
+   The Haryana cow (Hariana) is a native Indian dual-purpose cattle breed from Haryana, known for its white/ash body, strong build, and adaptability, serving well for both draught work (ploughing) and milk production, offering good milk yield (around 1000L/lactation) with healthy fat, and strong immunity to tropical diseases, making it a valuable, resilient breed for Indian farmers. 
+Key Characteristics
+Appearance: White or light ash color, medium-sized body, long face, small straight horns, and dark hindquarters/forehead.
+Origin: Native to Haryana, also popular in UP, Punjab, MP.
+Purpose: Dual-purpose (dairy & draught). 
+Advantages
+Strong Work Animals: Excellent for ploughing and carting due to powerful bullocks.
+Good Milk Yield: Fair milk producers, with average cows yielding around 1000 kg per lactation, and good ones up to 1700 kg.
+Healthy Milk: Milk has digestible, healthy fat content.
+Disease Resistance: Highly immune to many common tropical diseases, including mastitis, making them hardy.
+Adaptability: Thrives in harsh tropical climates.
+Cost-Effective: Combines dairy and draught utility, providing dual income streams for farmers.
+    </p>
+  </div>
 </div>
 <div class="card">
-  <img src="image/gircow.jpg" alt="">
-  
+  <img src="image/jersey.jpg">
   <div class="text-box">
-    <h3 style="margin:0;">Gircow-deatail</h3>
-    <p style="margin:20px;">•  Gir cows are a native Indian breed known for their high milk yield.<br> • A2 milk, disease resistance,
-                 and ability to thrive in tropical climates.<br> • For a dairy farm, key details include an average daily yield of 12–15 liters.<br>
-                  • A lactation period of 280–320 days.<br>  • A total lactation yield of 3,000–4,200 liters with a fat content of 4.5–5.5%.<br>
-                   • They have distinct physical traits like long. <br>• Folded ears and a prominent hump,
-                   <br>• And their gentle temperament makes them easy to manage. </p>
-  </div>
+    <h3>Jersey Cow</h3>
+    <p> The Jersey cow is a small, adaptable dairy breed from the British Channel Islands, known for producing nutrient-rich milk with high fat and protein, making it efficient and popular for small farms and premium milk products. Key advantages include lower feed costs, heat tolerance, easy calving, superior grazing, and a gentle nature, while characteristics include a light brown to dark fawn color, large head, black nose, and a high milk-to-body-weight ratio. 
+Key Characteristics
+Origin & Size: From Jersey Island; the smallest dairy breed, making them efficient on less land.
+Color: Varies from light gray to fawn or nearly black, often with lighter muzzles and darker points.
+Temperament: Known for being docile, calm, and easy to handle, with good mothering instincts.
+Physical Traits: Big eyes, dished forehead, black nose with a light muzzle, and hard black feet.
+Milk: High in butterfat (around 5%) and protein (around 3.9%), giving it a premium quality. 
+Advantages for Farmers
+Feed Efficiency: Convert feed into milk very efficiently, requiring less feed than larger breeds like Holsteins.
+Lower Costs: Smaller size and efficient feed use mean lower maintenance and production costs.
+Heat Tolerance: Better at handling heat, making them suitable for warmer climates.
+Calving Ease: Have fewer calving problems and shorter calving intervals, increasing overall herd productivity.
+Grazing Ability: Excellent foragers, thriving on pasture.
+Longevity: Longer productive life (up to 15 years) compared to other breeds.
+Premium Milk: Higher fat and protein command better prices and are ideal for cheese, butter, and yogurt. 
+Nutritional Benefits (of Jersey Milk)
+Rich in calcium, protein, and potassium.
+Contains Conjugated Linoleic Acid (CLA), linked to health benefits.
+Good for strong bones, vision, skin, and immune health.</p>
+ </div>
 </div>
-<div class="card1">
-  <img src="image/sahirwalcow.jpg" alt="">
-  
+<div class="card">
+  <img src="image/hfcow.jpg">
   <div class="text-box">
-    <h3 style="margin:0;">sahiwal-detail</h3>
-    <p style="margin:20px ;"> •Sahiwal cows are raised in dairy farms across India.<br> •  Major breeding areas in Punjab and Rajasthan.<br> 
-                 • Their daily milk production averages 8 to 12 liters. <br> • Though it can reach 15 liters under good conditions.
-                 <br> • Sahiwal farms can be found from small-scale setups to large commercial operations like the Harshit Gupta Dairy Farm in Karnal Haryana.</p>
-  </div>
+    <h3>Holstein Friesian (HF)Cow</h3>
+    <p> An HF cow is a Holstein Friesian, the world's highest-yielding dairy cattle breed, known for their distinctive black-and-white (or red-and-white) patches, originating from the Netherlands/Germany, and prized for massive milk volume, though with lower butterfat, making them ideal for commercial dairies despite needing good management for heat and high-quality feed. Key advantages are huge milk production (25-40+ liters/day), rapid growth, and strong genetic adaptability with proper care, boosting farmer income. 
+What is an HF Cow?
+Name: HF stands for Holstein Friesian.
+Origin: Northern Europe (Netherlands/Friesland).
+Appearance: Large body, often black and white patches, large udder.
+Size: Large, mature cows weigh 690-770 kg and stand tall.
+Milk: High volume (25-40+ liters/day), but lower fat (around 3.2-3.5%). 
+Advantages of HF Cows
+Exceptional Milk Yield: The biggest advantage; they produce significantly more milk than other breeds.
+Economic Profitability: High volume makes them great for commercial dairy, notes Karnal, Dairy Farm and Tabelawala.
+Good Temperament: Generally calm and gentle.
+Adaptability: Adapt well to diverse climates if managed properly (cooling, shade).
+Strong Genetics: Robust for commercial farming, offering high returns with good feed and management. 
+Management Considerations (Challenges)
+Heat Sensitivity: Need shade, fans, and cooling in hot regions.
+High Feed Needs: Require high-quality fodder and concentrates.
+Health: Prone to mastitis, metabolic issues if not managed well.</p>
+ </div>
 </div>
-<div class="card2">
-  <img src="image/tharparkar cow.webp" alt="">
-  
-  <div class="text-box">
-    <h3 style="margin:0;">Tharparkarcow-detail</h3>
-    <p style="margin:20px ;">• Tharparkar cows are found in India.<br>•  Particularly in Rajasthan and Gujarat, <br>• 
-                And are known for their good milk production,<br>•  Averaging 10-15 liters per day under good conditions.<br>• 
-                 Some individual cows can produce higher yields,<br>•  With records of up to 16 liters daily and even over 3000
-                 liters per lactation for high-nutrition animals in farm conditions.</p>
-  </div>
-</div>
-<div class="card3">
-  <img src="image/red-sindhicow.webp" alt="">
-  
-  <div class="text-box">
-    <h3 style="margin:0;">red-sindhicow-detail</h3>
-    <p style="margin:20px ;">• Red Sindhi dairy farms can be found in India,<br>•  Though the breed is facing endangerment and is less common than other breeds like Sahiwal. <br>
-                A Red Sindhi cow averages about 12-15 liters of milk per day,<br>•  With an average annual production of around 3,500 liters under good management. <br>While the daily average is between 12-15 liters,
-                 • <br>Annual yields are often cited up to 3,400 kg under optimal conditions.</p>
-  </div>
-</div>
-<div class="card4">
-  <img src="image/rathi cow.jpg" alt="">
-  
-  <div class="text-box">
-    <h3 style="margin:0;">Rathi cow-detail</h3>
-    <p style="margin:20px ;">• The Rathi breed is a prominent indigenous Indian cow known for its hardiness and milk production,
-                <br>• Primarily found in Rajasthan's arid regions.<br>•  Rathi cows typically produce an average of 6 to 8 liters of milk per day,<br>
-                 • Though high-yielding individuals can produce more.<br>• 
-                The milk production of Rathi cows can vary based on factors like feed quality, <br>• Farm management, and genetics. </p>
-  </div>
-</div>
-<div class="card5">
-  <img src="image/haryana-cows.jpg" alt="">
-  
-  <div class="text-box">
-    <h3 style="margin:0;">Haryanacow-detail</h3>
-    <p style="margin:20px ;">• In Haryana, India, <br>• A Haryana cow farm can produce an average of 6-8 liters of milk per day, 
-                <br>• While a high-yielding Holstein Friesian (HF) cow can produce anywhere from 15-25 liters or more.
-                 The actual milk production varies depending on the cow's breed,
-                 genetics, diet, and farming practices.<br>• 
-                Milk production details by breed
-           Haryana (Hariana) cow:
-             Average: 6–8 liters per day
-            Notes: Known for rich, flavorful milk high in butterfat. </p>
-  </div>
 </div>
 </body>
 </html>
